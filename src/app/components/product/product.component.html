@@ -1,0 +1,68 @@
+<div>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <p
+        class="nav-link"
+        [routerLinkActive]="'active'"
+        [routerLink]="['/Navigator']"
+        [queryParams]="{tab: 0}"
+        aria-current="page"
+        (click)="incomeActive()"
+        [ngClass]="{
+          active: income,
+          ' ': !income
+        }"
+      >
+        INCOME
+      </p>
+    </li>
+    <li class="nav-item">
+      <p
+        class="nav-link"
+        [routerLinkActive]="'active'"
+        [routerLink]="['/Navigator']"
+        [queryParams]="{tab: 1}"
+        (click)="outcomeActive()"
+        [ngClass]="{
+          active: outcome,
+          ' ': !outcome
+        }"
+      >
+        OUTCOME
+      </p>
+    </li>
+    <li class="nav-item">
+      <p
+        class="nav-link"
+        [routerLinkActive]="'active'"
+        [routerLink]="['/Navigator']"
+        [queryParams]="{tab: 2}"
+        (click)="loansActive()"
+        [ngClass]="{
+          active: loans,
+          ' ': !loans
+        }"
+      >
+        LOANS
+      </p>
+    </li>
+    <li class="nav-item">
+      <p
+        class="nav-link"
+        [routerLinkActive]="'active'"
+        [routerLink]="['/Navigator']"
+        [queryParams]="{tab: 3}"
+        (click)="investActive()"
+        [ngClass]="{
+          active: investments,
+          ' ': !investments
+        }"
+      >
+        INVESTMENTS
+      </p>
+    </li>
+  </ul>
+
+  <app-filtred></app-filtred>
+
+</div>
